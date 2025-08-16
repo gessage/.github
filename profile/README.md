@@ -3,9 +3,9 @@
 </div>
 
 <p align="center" >
-  <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="150"/>
-  <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="150"/>
-  <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="150"/>
+  <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="250"/>
+  <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="250"/>
+  <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="250"/>
 </p>
 
 # gessage CLI — AI Commit Messages that Follow Conventional Commits
