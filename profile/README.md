@@ -6,12 +6,12 @@
 
 **🔥 Free usage:** Generate commit messages using OpenRouter free models — [Get your free API key](https://openrouter.ai/settings/keys).
 
-<br>
 <p align="center" style="display:flex; gap:5px" >
   <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="250"/>
   <img src="https://github.com/gessage/.github/blob/main/Screenshot2.png?raw=true" alt="Screenshot 1" width="250"/>
   <img src="https://github.com/gessage/.github/blob/main/Screenshot3.png?raw=true" alt="Screenshot 1" width="250"/>
 </p>
+
 ---
 
 ## 🚀 Quick Links
