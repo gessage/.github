@@ -3,7 +3,7 @@
 </div>
 
 <br>
-<p align="center" style="margin-top:5px" >
+<p align="center" style="display:flex; gap:5px" >
   <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="250"/>
   <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="250"/>
   <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="250"/>
