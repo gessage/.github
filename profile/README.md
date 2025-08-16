@@ -2,6 +2,12 @@
   <img height="100" src="https://avatars.githubusercontent.com/u/226575780?s=200&v=4" alt="gessage logo" />
 </div>
 
+<p align="center" >
+  <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="150"/>
+  <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="150"/>
+  <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="150"/>
+</p>
+
 # gessage CLI — AI Commit Messages that Follow Conventional Commits
 
 **🔥 Free usage:** Generate commit messages using OpenRouter free models — [Get your free API key](https://openrouter.ai/settings/keys).
