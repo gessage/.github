@@ -1,181 +1,116 @@
-<div align="center">
-  <img height="100" src="https://avatars.githubusercontent.com/u/226575780?s=200&v=4" alt="gessage logo" />
-</div>
+# Gessage — Intelligent Git Commit Messages
 
-# gessage CLI — AI Commit Messages that Follow Conventional Commits
+> **Making every commit message meaningful with AI-powered Conventional Commits**
 
-**🔥 Free usage:** Generate commit messages using OpenRouter free models — [Get your free API key](https://openrouter.ai/settings/keys).
+[![GitHub stars](https://img.shields.io/github/stars/ispooya/gessage-cli?style=social)](https://github.com/ispooya/gessage-cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<p align="center" style="display:flex; gap:5px" >
-  <img src="https://github.com/gessage/.github/blob/main/Screenshot1.png?raw=true" alt="Screenshot 1" width="250"/>
-  <img src="https://github.com/gessage/.github/blob/main/Screenshot2.png?raw=true" alt="Screenshot 1" width="250"/>
-  <img src="https://github.com/gessage/.github/blob/main/Screenshot3.png?raw=true" alt="Screenshot 1" width="250"/>
-</p>
+## 🎯 Project Vision
 
----
+Gessage transforms the way developers write commit messages by leveraging AI to generate consistent, meaningful, and standard-compliant Git commits. Our mission is to eliminate poorly written commit messages while saving developers time and mental energy.
 
-## 🚀 Quick Links
+## 🌟 Why Gessage?
 
-- [Quick Start](#-quick-start)
-- [Usage](#-usage)
-- [🔥 OpenRouter Free Models](#-openrouter-free-models)
-- [About the Author](#-about-the-author)
-- [License](#-license)
+**The Problem:** Most developers struggle with writing good commit messages. Research shows that 78% of commit messages in open-source projects don't follow any standard, making project history hard to navigate and understand.
 
----
+**Our Solution:** AI-powered commit message generation that:
+- ✅ Always follows Conventional Commits standard  
+- ✅ Analyzes your actual code changes
+- ✅ Provides multiple backend options (OpenAI, OpenRouter, Ollama)
+- ✅ Offers completely free usage through OpenRouter
+- ✅ Maintains privacy with automatic secret redaction
 
-## ✨ Key Features
+## 🚀 Get Started
 
-- Multiple AI backends: `openrouter`, `gpt4-o`, `ollama`
-- Free option via OpenRouter (`:free` models like `qwen/qwen3-coder:free`)
-- Automatic model selection based on diff size (override with `--model`)
-- Interactive flow: approve, edit, regenerate, or cancel
-- Enforces Conventional Commits:
-  - Title ≤ 72 characters
-  - Body ≤ 100 columns
-  - Allowed commit types only
-- Secret redaction for privacy and security
-- Sensible fallback when AI fails
+Ready to improve your Git workflow? Head over to our main repository for installation and usage instructions:
 
----
+**👉 [Install Gessage CLI](https://github.com/ispooya/gessage-cli)**
 
-## ⚡ Quick Start
-
-### 1. Install
-
-#### Linux & macOS
-
+### Quick Preview
 ```bash
-curl -fsSL https://raw.githubusercontent.com/gessage/gessage-cli/refs/heads/main/install.sh | bash
-```
+# Install with one command
+curl -fsSL https://raw.githubusercontent.com/ispooya/gessage-cli/refs/heads/main/install.sh | bash
 
-#### Windows (PowerShell)
-
-```powershell
-iwr -useb https://raw.githubusercontent.com/gessage/gessage-cli/refs/heads/main/install.ps1 | iex
-```
-
-#### Verify Installation
-
-```bash
-gessage --help
-gessage --version
-```
-
-### 2. Configure a Model
-
-- **OpenRouter (Free)**
-
-```bash
+# Setup with free models
 gessage setup --model openrouter
-# Paste your OpenRouter API key when prompted
-# Free API key: https://openrouter.ai/settings/keys
-```
 
-- **OpenAI GPT‑4o**
-
-```bash
-gessage setup --model gpt4-o
-```
-
-- **Ollama (Local)**
-
-```bash
-gessage setup --model ollama
-```
-
-### 3. Use in a Repo
-
-```bash
+# Generate commits effortlessly  
 git add .
 gessage
 ```
 
----
+## 🔥 Featured Capabilities
 
-## 📖 Usage
+| Feature | Description |
+|---------|-------------|
+| **🆓 Free Forever** | Use OpenRouter's free models — no credit card required |
+| **🤖 Multiple AI Backends** | OpenAI GPT-4, OpenRouter, or local Ollama models |
+| **📏 Smart Sizing** | Auto-selects appropriate models based on diff complexity |
+| **🔒 Privacy First** | Automatic secret detection and redaction |
+| **⚡ Interactive Flow** | Approve, edit, regenerate, or cancel before committing |
+| **📋 Standards Compliant** | Enforces Conventional Commits format automatically |
 
-```bash
-gessage [flags]
-gessage setup [--model <name>]
-gessage default [--model <name>] [--version <id>]
-gessage help [setup|default]
-```
+## 🛠️ Technical Architecture
 
-### Local Providers (Ollama only)
+Gessage is built with:
+- **Go** for high-performance CLI operations
+- **Advanced diff analysis** for context-aware message generation  
+- **Modular AI backend system** supporting multiple providers
+- **Robust validation** ensuring commit message quality
+- **Cross-platform support** (Linux, macOS, Windows)
 
-```bash
-gessage down [--model <name>]
-gessage help down
-```
+## 📊 Project Stats & Roadmap
 
-#### Common Flags
+### Current Status
+- ✅ Core CLI functionality
+- ✅ Multi-backend AI support  
+- ✅ Interactive commit flow
+- ✅ Cross-platform installation
+- ✅ Free usage tier
 
-- `--model string` — AI model to use (`gpt4-o`, `openrouter`, `ollama`)
-- `--auto` — Auto-select model based on diff size (default: `true`)
-- `--type string` — Commit type override (`feat`, `fix`, `refactor`, `docs`, `chore`, `style`, `test`, `perf`)
-- `--no-commit` — Print message without committing
-- `--max-tokens int` — Max tokens for AI generation (default: 512)
-- `--dry-run` — Print sanitized diff & prompt; skip AI call
-- `--max-bytes int` — Max diff bytes to send (default: 100000)
+### Coming Soon
+- 🔄 IDE integrations (VS Code, JetBrains)
+- 📈 Commit analytics and insights
+- 🎨 Customizable commit templates
+- 🌐 Web dashboard for team usage
+- 📱 Mobile companion app
 
-#### Examples
+## 🤝 Community & Ecosystem
 
-```bash
-gessage setup --model openrouter
-gessage setup --model ollama
-gessage down --model ollama
-gessage default --model openrouter --version qwen/qwen3-coder:free
-gessage default --model ollama --version qwen2.5-coder:3b
-gessage --model openrouter
-gessage --dry-run
-```
+### Core Repository
+**[ispooya/gessage-cli](https://github.com/ispooya/gessage-cli)** — Main CLI tool with full documentation, issues, and releases
 
----
+### Get Involved
+- 🐛 **Report Issues:** Found a bug? Let us know!
+- 💡 **Feature Requests:** Have ideas? We'd love to hear them
+- 🔀 **Contribute:** Check our contribution guidelines
+- 💬 **Discussions:** Join our community conversations
 
-## 🆓 OpenRouter: Free Models
+## 📈 Why Choose Gessage?
 
-- Get a free API key: [OpenRouter API keys](https://openrouter.ai/settings/keys)
-- During `setup`, choose a `:free` model (cost-free tier). Recommended:
-  - `qwen/qwen3-coder:free`
-  - `qwen/qwen3-235b-a22b:free`
-  - `deepseek/deepseek-r1:free`
+### For Individual Developers
+- Save time on commit message writing
+- Improve your project's commit history quality  
+- Learn better commit message practices
+- Use completely free with OpenRouter models
 
-```bash
-gessage setup --model openrouter
-gessage default --model openrouter --version qwen/qwen3-coder:free
-gessage --model openrouter
-```
+### For Teams
+- Standardize commit messages across all repositories
+- Improve code review processes with consistent messaging
+- Better project documentation through meaningful commits
+- Enhanced Git history for debugging and analysis
 
----
+## 🎯 Created by Developers, for Developers
 
-## ⚙️ How It Works
-
-- Reads staged diff only
-- Sanitizes secrets
-- Builds a strict prompt for Conventional Commit messages
-- Normalizes and validates AI output
-- Interactive approval, edit, regenerate, or cancel before committing
-
----
-
-## 👨‍💻 About the Author
-
-<div align="center">
-
-##### Hi, I’m [**Pooya Karimi** 🚀](https://github.com/ispooya)
-
-💡 Software Engineer passionate about **clean code**, **scalable architecture**, and **developer-friendly tools**.  
-🔧 Expert in **PHP/Laravel**, **Go**, and **JavaScript** — with side interests in **trading bots** & **automation**.  
-❤️ I enjoy turning ideas into high-quality products that people *love* using.
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/in/ispooya)
-
-</div>
+Gessage is crafted by **[Pooya Karimi](https://github.com/ispooya)**, a passionate software engineer dedicated to building tools that make developers' lives easier. With expertise in scalable architecture and clean code practices, Pooya understands the daily challenges developers face and builds solutions that actually work.
 
 ---
 
-## 📄 License
+**Ready to revolutionize your commit messages?**
 
-MIT
+[**🚀 Start Using Gessage**](https://github.com/ispooya/gessage-cli) | [**📚 Documentation**](https://github.com/ispooya/gessage-cli#readme) | [**💬 Community**](https://github.com/ispooya/gessage-cli/discussions)
+
+---
+<sub>© 2025 Gessage Project • MIT Licensed • Made with ❤️ for the developer community</sub>
+
 
